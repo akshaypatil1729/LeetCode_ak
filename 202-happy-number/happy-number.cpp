@@ -5,13 +5,11 @@ public:
         unordered_map<int,int> mp;
 
         while(n != 1) {
-
-            if(mp[n] > 0) {
-                return false;
-            }
-
             mp[n]++;
 
+             if(mp[n] > 1) {
+                return false;
+            }
             int sum = 0;
 
             while(n > 0) {
