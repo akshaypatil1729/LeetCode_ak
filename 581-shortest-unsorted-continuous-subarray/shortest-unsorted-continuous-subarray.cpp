@@ -14,7 +14,7 @@ public:
                e = max(e,i);
             }
         }
-        if(st==n && e==0){
+        if(st==n){
             return 0;
         }
         return e-st+1;
