@@ -7,7 +7,7 @@ public:
     for(int i = 0 ; i < n ; i++){
         if(s[i] == '('){
             if(c > 0){
-                res.push_back(s[i]);
+                res.push_back(s[i]); 
             }
             c++;
         } else {
