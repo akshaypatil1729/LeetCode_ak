@@ -1,15 +1,16 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-       int n = s.length();
-       unordered_map<char,int> mp;
-       int i = 0;
-       while(i<n){
-        mp[s[i]]++;
-        i++;
-       }
-       for(int i = 0 ; i<n ; i++) if(mp[s[i]]==1){
-        return i;
-       }return -1;
+    int n = s.length();
+    unordered_map<char,int> mpp;
+    // int minIndex = INT_MAX;
+    for(int i = 0 ; i < n ; i ++){
+        mpp[s[i]]++;
+    }
+    for(int i = 0 ; i < n ; i++){
+        if(mpp[s[i]]==1){
+            return i;
+        }
+    }return -1;
     }
 };
